@@ -1,0 +1,3 @@
+requests==2.21.0
+instabot==0.42.0
+python-dotenv==0.10.2
