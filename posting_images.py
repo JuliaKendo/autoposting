@@ -9,7 +9,7 @@ proxy = None
 
 def get_image_dir():
     current_directory = os.path.dirname(__file__)
-    return current_directory+'\images'
+    return current_directory+'\\images'
 
 def posting_images():
 
@@ -28,7 +28,7 @@ def posting_images():
 
     for upload_image in upload_images:
         if upload_image:
-            file_path = f'{image_directory}\{upload_image}'
+            file_path = f'{image_directory}\\{upload_image}'
             try:
                 bot.upload_photo(file_path, caption=upload_image)
                 if bot.api.last_response.status_code != 200:
