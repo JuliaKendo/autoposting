@@ -6,11 +6,11 @@ image_collections = ["all","holiday_cards","wallpaper","spacecraft","news","prin
 
 def get_image_dir():
     current_directory = os.path.dirname(__file__)
-    return current_directory+'\images'
+    return current_directory+'\\images'
 
 def save_image(url, filename):
     image_directory = get_image_dir()
-    file_path = f'{image_directory}\{filename}'
+    file_path = f'{image_directory}\\{filename}'
 
     if not os.path.exists(image_directory):
         os.mkdir(image_directory)
