@@ -1,6 +1,8 @@
 import requests
 import os
 
+MAX_SIZE_IMAGE = 20000000
+
 url_template = 'http://hubblesite.org/api/v3/image/{}'
 image_collections = ["all","holiday_cards","wallpaper","spacecraft","news","printshop","stsci_gallery"]
 
@@ -47,7 +49,7 @@ def get_hablle_url(image_files):
     while i>0:
         image_line = image_files[i]
         file_size = image_line['file_size']
-        if file_size <= 20000000:
+        if file_size <= MAX_SIZE_IMAGE:
             return image_line['file_url']
         i=i-1
         
